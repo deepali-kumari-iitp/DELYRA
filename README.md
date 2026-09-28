@@ -50,6 +50,20 @@ Instead of functioning as only a chatbot, DELYRA combines AI reasoning with prac
 - Agent activity visualization
 
 ---
+## 📸 Screenshots
+
+### 🏠 Home Dashboard
+
+![DELYRA Home Dashboard](screenshots/home-dashboard.png)
+
+### 📊 Analytics Dashboard
+
+![DELYRA Analytics Dashboard](screenshots/analytics-dashboard.png)
+
+### 📚 Knowledge Base
+
+![DELYRA Knowledge Base](screenshots/knowledge-base.png)
+
 
 ## 🏗️ Architecture
 
@@ -293,6 +307,8 @@ Knowledge/document workspace
 Analytics
 Settings
 Responsive UI
+
+
 🔮 Future Improvements
 
 Planned improvements include:
@@ -306,6 +322,7 @@ Production deployment
 Streaming AI responses
 More advanced long-term memory
 Additional productivity integrations
+
 🎯 Project Goal
 
 The goal of DELYRA is to move beyond traditional chatbot interactions and create an AI workspace where an agent can understand a user's goal, select appropriate tools, perform actions, and maintain useful context over time.
