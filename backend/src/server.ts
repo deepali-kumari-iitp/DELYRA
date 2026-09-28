@@ -9,14 +9,13 @@ import calendarRoutes from "./routes/calendar.routes.js";
 
 const app = express();
 
-const PORT = 5000;
+const PORT = Number(process.env.PORT) || 5000;
 
 // =========================
 // MIDDLEWARE
 // =========================
 
 app.use(cors());
-
 app.use(express.json());
 
 // =========================
@@ -24,13 +23,9 @@ app.use(express.json());
 // =========================
 
 app.use("/api/ai", aiRoutes);
-
 app.use("/api/tasks", tasksRoutes);
-
 app.use("/api/notes", notesRoutes);
-
 app.use("/api/projects", projectsRoutes);
-
 app.use("/api/calendar", calendarRoutes);
 
 // =========================
@@ -47,8 +42,6 @@ app.get("/", (_req, res) => {
 // START SERVER
 // =========================
 
-app.listen(PORT, () => {
-  console.log(
-    `DELYRA server running on http://localhost:${PORT}`
-  );
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`DELYRA backend running on port ${PORT}`);
 });
