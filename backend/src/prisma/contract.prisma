@@ -1,0 +1,47 @@
+// use prisma-8
+
+model Memory {
+  id        Int      @id @default(autoincrement())
+  userId    String?
+  role      String
+  content   String
+  createdAt TimestamptzString @default(now())
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  userId      String?
+  name        String
+  description String?
+  progress    Int      @default(0)
+  createdAt   TimestamptzString @default(now())
+}
+
+model Task {
+  id          Int      @id @default(autoincrement())
+  userId      String?
+  projectId   Int?
+  title       String
+  description String?
+  dueDate     String?
+  status      String   @default("pending")
+  createdAt   TimestamptzString @default(now())
+}
+
+model Note {
+  id        Int      @id @default(autoincrement())
+  userId    String?
+  title     String
+  content   String
+  createdAt TimestamptzString @default(now())
+  updatedAt TimestamptzString @default(now())
+}
+model CalendarEvent {
+  id          Int      @id @default(autoincrement())
+  userId      String?
+  title       String
+  description String?
+  date        String
+  time        String
+  createdAt   TimestamptzString @default(now())
+}
