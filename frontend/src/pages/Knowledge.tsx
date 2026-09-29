@@ -153,17 +153,7 @@ function Knowledge() {
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   };
 
-  // =========================
-  // OPEN FILE PICKER
-  // =========================
-
-  const openFilePicker = () => {
-    if (uploading) {
-      return;
-    }
-
-    fileInputRef.current?.click();
-  };
+  
 
   // =========================
   // EXTRACT PDF TEXT
